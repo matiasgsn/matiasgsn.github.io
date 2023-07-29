@@ -1,3 +1,7 @@
+
+#subtitle{
+    margin-bottom: 30px;
+}
 #divBusca{
     background-color:#575757;
     border-radius:30px;
@@ -49,4 +53,8 @@ input{
     width: 500px;
     height: 60px;
     border-radius: 25px;
+}
+#essenciais{
+    margin-top: 100px;
+    margin-left: -1000px;
 }
