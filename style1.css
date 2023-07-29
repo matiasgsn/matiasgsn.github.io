@@ -56,5 +56,8 @@ input{
 }
 #essenciais{
     margin-top: 100px;
-    margin-left: -1000px;
+    background-color: transparent;
+    width: 1200px;
+    height: auto;
+    text-align: left;
 }
