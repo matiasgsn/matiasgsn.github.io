@@ -11,7 +11,6 @@
     <title>Projeto Thêmis</title>
   </head>
   <body>
-      
     <nav class="navbar navbar-light bg-light"> <!-- a Tag <nav> cria uma barra de navegação fixa no topo da tela-->
         <span class="navbar-brand mb-0 h1">Projeto Thêmis</span>
         <!-- O mx-auto centraliza o conteúdo na página automaticamente-->
@@ -32,7 +31,7 @@
     <div class="jumbotron"> <!-- Essa classe cria uma caixa grande na página pra chamar atenção-->
         <center>
             <br> <br> <br> <br> <br>
-            <h1 class="display-4 ">Pesquise uma lei:</h1> <!-- Display parece alterar o tamanho da fonte-->
+            <h1 class="display-2 ">Pesquise uma lei:</h1> <!-- Display parece alterar o tamanho da fonte-->
         </center>
         
             <form class="form-inline pt-4 my-2 justify-content-center">
@@ -48,15 +47,41 @@
             </form>
     </div>
 
-    <div class="card mx-auto mb-3" style="width: 18rem;"> <!-- Card de Direito Trabalhista-->
-        <img class="card-img-top" src="dirtrabalhista.jpg" alt="Direito Trabalhista">
-        <div class="card-body">
-          <h5 class="card-title">Direito Trabalhista</h5>
-          <p class="card-text">Artigos da Constituição Brasilera sobre os direitos do trabalho.</p>
-          <a href="#" class="btn btn-primary">Visitar</a>
+    <div class="jumbotron">
+      <h2>Mais Relevantes:</h2>
+      
+      <div class="card-deck p-4"> <!--A classe card-deck agrupa os cards em deque, facilitando a organização-->
+        <div class="card"> <!-- Card de Direito Trabalhista-->
+          <img class="card-img-top" src="dirtrabalhista.jpg" alt="Direito Trabalhista">
+          <div class="card-body">
+            <h5 class="card-title">Direito Trabalhista</h5>
+            <p class="card-text">Artigos da Constituição Brasilera sobre os direitos do trabalho.</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
+      </div>
+  
+      
+      <div class="card">
+          <img class="card-img-top" src="placeholder.png" alt="Placeholder">
+          <div class="card-body">
+            <h5 class="card-title">Placeholder</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus et felis consectetur, a.</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
         </div>
+  
+        <div class="card">
+          <img class="card-img-top" src="placeholder.png" alt="Placeholder">
+          <div class="card-body">
+            <h5 class="card-title">Placeholder</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla lacus et felis consectetur, a.</p>
+            <a href="#" class="btn btn-primary">Visitar</a>
+          </div>
+        </div>
+      </div>
     </div>
     
+  </div>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
