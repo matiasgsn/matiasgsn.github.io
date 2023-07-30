@@ -11,6 +11,38 @@
     <title>Projeto Thêmis</title>
   </head>
   <body>
+    <style>
+      @font-face {
+        font-family:Now;
+        src: url(Fontes/Now-Light.otf);
+        font-weight: lighter;
+      }
+
+      @font-face {
+        font-family:Now;
+        src: url(Fontes/Now-Regular.otf);
+        font-weight: normal;
+      }
+
+      @font-face {
+        font-family:Now;
+        src: url(Fontes/NowAlt-Bold.otf);
+        font-weight: bold;
+      }
+  
+      
+      #maintab{
+        background-color: #4169E1;
+      }
+
+      body{
+        font-family: Now;
+      }
+
+      #busquelei{
+        color: white;
+      }
+    </style>
     <nav class="navbar navbar-light bg-light"> <!-- a Tag <nav> cria uma barra de navegação fixa no topo da tela-->
         <span class="navbar-brand mb-0 h1">Projeto Thêmis</span>
         <!-- O mx-auto centraliza o conteúdo na página automaticamente-->
@@ -21,6 +53,7 @@
             <!-- Esse botão só aparece quando a tela é reduzida, para aumentar a responsividade-->
             
             <div class="collapse navbar-collapse" id="botaonavbar">
+                <br>
                 Tendo uma visão ampla do défcite relativo ao conhecimento da Constituição, que afeta a democracia brasileira, o Projeto Thêmis, site que traz com clareza, acessibilidade e humanidade a Constituição Federal, foi criado, com a intenção de atender à necessidade cotidiana das pessoas de exercerem sua cidadania, defendendo seus direitos e compreendendo os seus deveres. 
                 <br>
                 <br>
@@ -38,10 +71,10 @@
               </div>
       </nav>
     
-    <div class="jumbotron"> <!-- Essa classe cria uma caixa grande na página pra chamar atenção-->
+    <div class="jumbotron" id="maintab"> <!-- Essa classe cria uma caixa grande na página pra chamar atenção-->
         <center>
             <br> <br> <br> <br> <br>
-            <h1 class="display-2 ">Pesquise uma lei:</h1> <!-- Display parece alterar o tamanho da fonte-->
+            <h1 class="display-2" id="busquelei">Busque uma lei aqui:</h1> <!-- Display parece alterar o tamanho da fonte-->
         </center>
         
             <form class="form-inline pt-4 my-2 justify-content-center">
