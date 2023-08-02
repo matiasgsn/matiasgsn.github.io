@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Formulário Thêmis</title>
+</head>
+
+<body>
+    <style>
+        @font-face {
+          font-family:Now;
+          src: url(Fontes/Now-Light.otf);
+          font-weight: lighter;
+        }
+  
+        @font-face {
+          font-family:Now;
+          src: url(Fontes/Now-Regular.otf);
+          font-weight: normal;
+        }
+  
+        @font-face {
+          font-family:Now;
+          src: url(Fontes/NowAlt-Bold.otf);
+          font-weight: bold;
+        }
+
+        body{
+        font-family: Now;
+      }
+
+        #texto{
+            opacity: 75%;
+        }
+    </style>
+
+    <div class="jumbotron jumbotron-fluid" style="background-color:#4169e1;">
+        <div class="container">
+            <h1 class="display-4" style="color:white;">Suporte - Projeto Thêmis</h1>
+            <p class="lead" style="color:white;">Denúncia de problemas na página</p>
+        </div>
+    </div>
+    
+    <form class="w-75 mx-auto needs-validation" novalidate>
+        <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label">Cliente:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu nome" required>
+            <div class="valid-feedback">
+                Tudo certo!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect2" class="form-label">Selecione o problema:</label>
+            <select class="form-control" id="exampleFormControlSelect2" required>
+                <option value="" disabled selected>Selecione um</option>
+                <option>Vazamento de Dados Pessoais</option>
+                <option>Página sob ataque de DDoS</option>
+                <option>Latência</option>
+                <option>CSS do site não carrega</option>
+                <option>Erro de responsividade</option>
+                <option>Inputs não aceitam acento</option>
+            </select>
+            <div class="valid-feedback">
+                Tudo certo!
+            </div>
+            <div class="invalid-feedback">
+                Por favor, escolha uma opção.
+              </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput3">Endereço de email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="nome@exemplo.com" required>
+            <div class="valid-feedback">
+                Tudo certo!
+            </div>
+            <div class="invalid-feedback">
+                Por favor, insira um e-mail válido.
+              </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail4">Telefone:</label>
+            <input type="number" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="(XX) XX XXXXX-XXXX" required>
+            <div class="valid-feedback">
+                Tudo certo!
+            </div>
+            <div class="invalid-feedback">
+                Por favor, insira um número válido.
+              </div>
+            <br>
+            <br>
+            
+            <button type="submit" class="btn btn-warning mr-3" style="margin-top:-3rem;"> 
+                Enviar
+            </button>
+
+            <a href="" class="btn btn-warning" style="margin-top:-3rem;"> 
+                Página inicial
+            </a>
+
+            <br> <br>
+            <p id="texto">
+            O problema será solucionado dentre 3 a 48 horas. <br>
+            Fique atento ao possível contato por e-mail ou telefone.
+            </p>
+            <script>
+                (function () {
+                        'use strict'
+                    
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.querySelectorAll('.needs-validation')
+                    
+                        // Loop over them and prevent submission
+                        Array.prototype.slice.call(forms)
+                        .forEach(function (form) {
+                            form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                    
+                            form.classList.add('was-validated')
+                            }, false)
+                        })
+                    })()
+                </script>
+    </form>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
