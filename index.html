@@ -50,9 +50,62 @@
       #fontcard{
         color: white;
       }
+
       .card-body{
         background-color: #4169E1;
         color: white;
+      }
+
+      #cardlei{
+        border: none;
+        border-radius: 0;
+        box-shadow: 2xp 6px 8px 0 rgba(22, 22, 26, 0.18);
+      }
+
+      .carousel-control-prev, .carousel-control-next{
+        background-color: #1e1e1e;
+        width: 6vh;
+        height: 6vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .carousel-control-prev span, .carousel-control-next span{
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+ 
+
+      @media screen and (min-width: 577px) {
+        .cards-wrapper{
+          display: flex;
+        }
+
+        #cardlei{
+          margin: 0 .5em;
+          width: calc(100% / 3);
+        }
+
+        .image-wrapper{
+          height: 22vw;
+          margin: 0 auto;
+          /* display: flex;
+          align-items: center;
+          justify-content: center;*/
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+          .card:not(:first-child){
+            display: none;
+          }
+      }
+
+      .image-wrapper img{
+        max-width: 100%;
+        max-height: 100%;
       }
     
     </style>
@@ -108,24 +161,267 @@
 
     <div class="jumbotron"> <!-- Outra caixa especificamente para os cards-->
       <h2>Mais Relevantes:</h2>
+
+      <div id="carouselnormal" class="carousel slide d-none d-sm-block" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="cards-wrapper">
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 1</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 2</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 3</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>                  
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <div class="cards-wrapper">
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 4</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 5</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 6</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="cards-wrapper">
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 7</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 8</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+
+                  <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 9</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-warning">Visitar</a>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselnormal" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselnormal" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+
+      <div id="carouselsmall" class="carousel slide d-sm-none" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 1</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 2</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>         </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 3</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>                  
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 4</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 5</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 6</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 7</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 8</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card" id="cardlei">
+                    <div class="image-wrapper">
+                      <img src="placeholder.png" alt="Placeholder">
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Placeholder 9</h5>
+                      <p class="card-text">Placeholder</p>
+                      <a href="#" class="btn btn-primary">Visitar</a>
+                    </div>
+                  </div>
+          </div>
+        </div>
+
+
+        <a class="carousel-control-prev" href="#carouselsmall" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselsmall" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
       
-      <div class="card-deck p-4"> <!--A classe card-deck agrupa os cards em deque, facilitando a organização-->
-        <div class="card" id="cartão"> <!-- Card de Direito Trabalhista-->
+        <!-- <div class="card" id="cartão">
           <img class="card-img-top" src="dirtrabalhista.jpg" alt="Direito Trabalhista">
           <div class="card-body" id="fontcard">
             <h5 class="card-title">Direito Trabalhista</h5>
             <p class="card-text">Artigos da Constituição Brasileira sobre os direitos do trabalho.</p>
             <a href="https://www.planalto.gov.br/ccivil_03/decreto-lei/Del5452.htm" class="btn btn-primary btn-warning">Visitar</a>
           </div>
-      </div>
+        </div>
   
-      <div class="card" id="cartão">
-          <img class="card-img-top" src="dirconsumidor1.jpg" alt="Placeholder">
-          <div class="card-body" id="fontcard">
-            <h5 class="card-title">Direito do Consumidor</h5>
-            <p class="card-text">Artigos da Constituição Brasileira sobre os direitos do consumidor.</p>
-            <a href="https://www.planalto.gov.br/ccivil_03/Leis/L8078compilado.htm" class="btn btn-primary btn-warning">Visitar</a>
-          </div>
+        <div class="card" id="cartão">
+            <img class="card-img-top" src="dirconsumidor1.jpg" alt="Placeholder">
+            <div class="card-body" id="fontcard">
+              <h5 class="card-title">Direito do Consumidor</h5>
+              <p class="card-text">Artigos da Constituição Brasileira sobre os direitos do consumidor.</p>
+              <a href="https://www.planalto.gov.br/ccivil_03/Leis/L8078compilado.htm" class="btn btn-primary btn-warning">Visitar</a>
+            </div>
         </div>
   
         <div class="card" id="cartão">
@@ -135,9 +431,7 @@
             <p class="card-text">Artigos da Constituição Brasileira sobre os direitos civis.</p>
             <a href="https://www.planalto.gov.br/ccivil_03/LEIS/2002/L10406compilada.htm" class="btn btn-primary btn-warning">Visitar</a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div> -->
     
   </div>
     <!-- JavaScript (Opcional) -->
