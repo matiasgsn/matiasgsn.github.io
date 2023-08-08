@@ -1,339 +1,375 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Projeto Thêmis</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <style>
-      @font-face {
-        font-family:Now;
-        src: url(Fontes/Now-Light.otf);
-        font-weight: lighter;
-      }
-
-      @font-face {
-        font-family:Now;
-        src: url(Fontes/Now-Regular.otf);
-        font-weight: normal;
-      }
-
-      @font-face {
-        font-family:Now;
-        src: url(Fontes/NowAlt-Bold.otf);
-        font-weight: bold;
-      }
-  
-      
-      #maintab{
-        background-image: url(background.jpg); 
-        width: 100%;
-      }
-
-      body{
-        font-family: Now;
-      }
-
-      #busquelei{
-        color: white;
-      }
-      #cartão{
-        background-color: #4169E1;
-        color: white;
-      }
-      #fontcard{
-        color: white;
-      }
-
-      .card-body{
-        background-color: #4169E1;
-        color: white;
-      }
-
-      #cardlei{
-        border: none;
-        border-radius: 0;
-        box-shadow: 2xp 6px 8px 0 rgba(22, 22, 26, 0.18);
-      }
-
-      .carousel-control-prev, .carousel-control-next{
-        background-color: #1e1e1e;
-        width: 6vh;
-        height: 6vh;
-        border-radius: 50%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      .carousel-control-prev span, .carousel-control-next span{
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-
- 
-
-      @media screen and (min-width: 577px) {
-        .cards-wrapper{
-          display: flex;
+        @font-face {
+            font-family: Now;
+            src: url(Fontes/Now-Light.otf);
+            font-weight: lighter;
         }
 
-        #cardlei{
-          margin: 0 .5em;
-          width: calc(100% / 3);
+        @font-face {
+            font-family: Now;
+            src: url(Fontes/Now-Regular.otf);
+            font-weight: normal;
         }
 
-        .image-wrapper{
-          height: 22vw;
-          margin: 0 auto;
-          /* display: flex;
+        @font-face {
+            font-family: Now;
+            src: url(Fontes/NowAlt-Bold.otf);
+            font-weight: bold;
+        }
+
+
+        #maintab {
+            background-image: url(background.jpg);
+            width: 100%;
+        }
+
+        body {
+            font-family: Now;
+        }
+
+        #busquelei {
+            color: white;
+        }
+
+        #cartão {
+            background-color: #4169E1;
+            color: white;
+        }
+
+        #fontcard {
+            color: white;
+        }
+
+        .card-body {
+            background-color: #4169E1;
+            color: white;
+        }
+
+        #cardlei {
+            border: none;
+            border-radius: 0;
+            box-shadow: 2xp 6px 8px 0 rgba(22, 22, 26, 0.18);
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: #1e1e1e;
+            width: 6vh;
+            height: 6vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-control-prev span,
+        .carousel-control-next span {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+
+
+        @media screen and (min-width: 577px) {
+            .cards-wrapper {
+                display: flex;
+            }
+
+            #cardlei {
+                margin: 0 .5em;
+                width: calc(100% / 3);
+            }
+
+            .image-wrapper {
+                height: 22vw;
+                margin: 0 auto;
+                /* display: flex;
           align-items: center;
           justify-content: center;*/
+            }
         }
-      }
 
-      @media screen and (max-width: 576px) {
-          .card:not(:first-child){
-            display: none;
-          }
-      }
+        @media screen and (max-width: 576px) {
+            .card:not(:first-child) {
+                display: none;
+            }
+        }
 
-      .image-wrapper img{
-        max-width: 100%;
-        max-height: 100%;
-      }
-    
+        .image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
     <nav class="navbar navbar-light bg-light"> <!-- a Tag <nav> cria uma barra de navegação fixa no topo da tela-->
         <span class="navbar-brand mb-0 h1">Projeto Thêmis</span>
         <!-- O mx-auto centraliza o conteúdo na página automaticamente-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#botaonavbar" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                Sobre o Projeto
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Esse botão só aparece quando a tela é reduzida, para aumentar a responsividade-->
-            
-            <div class="collapse navbar-collapse" id="botaonavbar">
-                <br>
-                Tendo uma visão ampla do déficit relativo ao conhecimento da Constituição, que afeta a democracia brasileira, o Projeto Thêmis, site que traz com clareza, acessibilidade e humanidade a Constituição Federal, foi criado, com a intenção de atender à necessidade cotidiana das pessoas de exercerem sua cidadania, defendendo seus direitos e compreendendo os seus deveres. 
-                <br>
-                <br>
-                Esse site tem o objetivo de facilitar o acesso a constituição a fim de que a população que não tem ciência sobre seus direitos assegurados pela Carta Magna possa tê-la, suprindo assim a falta desses aprendizados no ensino educacional brasileiro.
-                <br>
-                <br>
-                Projeto realizado pelos alunos do 3° ano da Escola SESI José Carvalho / SENAI Feira de Santana: <br>
-                Luana Keren Almeida Lobo <br>
-                Marcos Vinícius Souza Santana <br>
-                Matias Gonçalves dos Santos Neto <br>
-                Rafael Lima dos Santos <br>
-                Railan Patrick Teles de Oliveira <br>
-                Tainá Vieira de Jesus <br>
-                Tauana Santos Nunes da Cruz <br>
-              </div>
-      </nav>
-    
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ModalLongoExemplo">
+            Sobre Nós
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog"
+            aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content"
+                    style="background-image:url(placeholder2.jpg);background-repeat: no-repeat;background-size: cover; font-weight: bold; color: black;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TituloModalLongoExemplo">Sobre nós</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify;">
+                        Tendo uma visão ampla do déficit relativo ao conhecimento da Constituição, que afeta a
+                        democracia brasileira, o Projeto Thêmis, site que traz com clareza, acessibilidade e humanidade
+                        a Constituição Federal, foi criado, com a intenção de atender à necessidade cotidiana das
+                        pessoas de exercerem sua cidadania, defendendo seus direitos e compreendendo os seus deveres.
+                        <br>
+                        <br>
+                        Esse site tem o objetivo de facilitar o acesso a constituição a fim de que a população que não
+                        tem ciência sobre seus direitos assegurados pela Carta Magna possa tê-la, suprindo assim a falta
+                        desses aprendizados no ensino educacional brasileiro.
+                        <br>
+                        <br>
+                        Projeto realizado pelos alunos do 3° ano do SESI/SENAI Feira de Santana:
+                        <br>
+                        Luana Keren Almeida Lobo <br>
+                        Marcos Vinícius Souza Santana <br>
+                        Matias Gonçalves dos Santos Neto <br>
+                        Rafael Lima dos Santos <br>
+                        Railan Patrick Teles de Oliveira <br>
+                        Tainá Vieira de Jesus <br>
+                        Tauana Santos Nunes da Cruz <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
     <div class="jumbotron" id="maintab"> <!-- Essa classe cria uma caixa grande na página pra chamar atenção-->
         <center>
             <br> <br> <br> <br> <br>
-            <h1 class="display-2" id="busquelei">Busque uma lei aqui:</h1> <!-- Display parece alterar o tamanho da fonte-->
+            <h1 class="display-2" id="busquelei">Busque uma lei aqui:</h1>
+            <!-- Display parece alterar o tamanho da fonte-->
         </center>
-        
-            <form class="form-inline pt-4 my-2 justify-content-center">
+
+        <form class="form-inline pt-4 my-2 justify-content-center">
             <!-- O Bootstrap é um método de programação baseado em HTML que usa a CLASSE como método de customização. Neste formulário, pt-4 adiciona um Padding-top de tamanho 4, my-2 adiciona uma Margem no eixo Y de tamanho 2 e justify-content-center justifica o conteúdo ao centro-->
-            <input class="form-control mr-sm-1 w-50 p-3 rounded" type="search" placeholder="Digite a lei" aria-label="Pesquisar">
+            <input class="form-control mr-sm-1 w-50 p-3 rounded" type="search" placeholder="Digite a lei"
+                aria-label="Pesquisar">
             <!--aria-label adiciona texto para um leitor de tela (acessibilidade)-->
-            
+
             <!-- form-control permite estilizar formulários de texto como <input>, <textarea> e <select>, mr-sm-1 adiciona uma margem pequena à direita de tamanho 1, w refere-se ao width e p parece adicionar um padding geral -->
-            
-                <!-- Todas essas propriedades são explicadas na wiki, então só vou detalhar as partes mais específicas do trabalho-->
+
+            <!-- Todas essas propriedades são explicadas na wiki, então só vou detalhar as partes mais específicas do trabalho-->
             <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Pesquisar</button>
             <!-- btn-outline-success altera o outline do botão para o tipo "Success" (verde e brilhante)-->
-            </form>
+        </form>
 
-            <center><a class="btn btn-warning btn-lg px-4 mt-5" type="submit" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Abrir a Constituição</a></center>
-            
+        <center><a class="btn btn-warning btn-lg px-4 mt-5" type="submit"
+                href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm">Abrir a Constituição</a>
+        </center>
+
     </div>
 
     <div class="jumbotron"> <!-- Outra caixa especificamente para os cards-->
-      <h2>Mais Relevantes:</h2>
+        <h2>Mais Relevantes:</h2>
 
-      <div id="carouselnormal" class="carousel slide d-none d-sm-block" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-              <div class="cards-wrapper">
-                  <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Direitos Trabalhistas</h5>
-                      <p class="card-text">Consolidação das Leis Trabalhistas (CLT).</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
+        <div id="carouselnormal" class="carousel slide d-none d-sm-block" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper">
+                        <div class="card" id="cardlei">
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Direitos Trabalhistas</h5>
+                                <p class="card-text">Consolidação das Leis Trabalhistas (CLT).</p>
+                                <a href="#" class="btn btn-warning">Visitar</a>
+                            </div>
+                        </div>
 
-                  <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Direitos Fundamentais (art. 5°)</h5>
-                      <p class="card-text">Direitos Fundamentais de todos as pessoas no território brasileiro.</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
+                        <div class="card" id="cardlei">
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Direitos Fundamentais (art. 5°)</h5>
+                                <p class="card-text">Direitos Fundamentais de todos as pessoas no território brasileiro.
+                                </p>
+                                <a href="#" class="btn btn-warning">Visitar</a>
+                            </div>
+                        </div>
 
-                  <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
+                        <div class="card" id="cardlei">
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Código Penal</h5>
+                                <p class="card-text">As medidas de socioeducação aplicadas aos infratores.</p>
+                                <a href="#" class="btn btn-warning">Visitar</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Código Penal</h5>
-                      <p class="card-text">As medidas de socioeducação aplicadas aos infratores.</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>                  
-              </div>
-          </div>
+                </div>
 
-          <div class="carousel-item">
-              <div class="cards-wrapper">
-                  <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Maria da Penha</h5>
-                      <p class="card-text">A lei que visa proteger as mulheres contra agressões de quaisquer tipos.</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
+                <div class="carousel-item">
+                    <div class="cards-wrapper">
+                        <div class="card" id="cardlei">
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Maria da Penha</h5>
+                                <p class="card-text">A lei que visa proteger as mulheres contra agressões de quaisquer
+                                    tipos.</p>
+                                <a href="#" class="btn btn-warning">Visitar</a>
+                            </div>
+                        </div>
 
-                  <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Código de Defesa do Consumidor</h5>
-                      <p class="card-text">Os direitos de quem compra e os deveres de quem vende.</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
+                        <div class="card" id="cardlei">
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Código de Defesa do Consumidor</h5>
+                                <p class="card-text">Os direitos de quem compra e os deveres de quem vende.</p>
+                                <a href="#" class="btn btn-warning">Visitar</a>
+                            </div>
+                        </div>
 
-                  <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
+                        <div class="card" id="cardlei">
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Seguridade Social</h5>
+                                <p class="card-text">Os direitos de seguridade social.</p>
+                                <a href="#" class="btn btn-warning">Visitar</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Seguridade Social</h5>
-                      <p class="card-text">Os direitos de seguridade social.</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselnormal" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselnormal" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-      </div>
-
-      <div id="carouselsmall" class="carousel slide d-sm-none" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Placeholder 1</h5>
-                      <p class="card-text">Placeholder</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Placeholder 2</h5>
-                      <p class="card-text">Placeholder</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>         </div>
-          <div class="carousel-item">
-            <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Placeholder 3</h5>
-                      <p class="card-text">Placeholder</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>                  
-          </div>
-          <div class="carousel-item">
-            <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Placeholder 4</h5>
-                      <p class="card-text">Placeholder</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Placeholder 5</h5>
-                      <p class="card-text">Placeholder</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
-          </div>
-          <div class="carousel-item">
-            <div class="card" id="cardlei">
-                    <div class="image-wrapper">
-                      <img src="placeholder.png" alt="Placeholder">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Placeholder 6</h5>
-                      <p class="card-text">Placeholder</p>
-                      <a href="#" class="btn btn-warning">Visitar</a>
-                    </div>
-                  </div>
-          </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselnormal" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselnormal" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
         </div>
 
+        <div id="carouselsmall" class="carousel slide d-sm-none" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card" id="cardlei">
+                        <div class="image-wrapper">
+                            <img src="placeholder.png" alt="Placeholder">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Placeholder 1</h5>
+                            <p class="card-text">Placeholder</p>
+                            <a href="#" class="btn btn-warning">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" id="cardlei">
+                        <div class="image-wrapper">
+                            <img src="placeholder.png" alt="Placeholder">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Placeholder 2</h5>
+                            <p class="card-text">Placeholder</p>
+                            <a href="#" class="btn btn-warning">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" id="cardlei">
+                        <div class="image-wrapper">
+                            <img src="placeholder.png" alt="Placeholder">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Placeholder 3</h5>
+                            <p class="card-text">Placeholder</p>
+                            <a href="#" class="btn btn-warning">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" id="cardlei">
+                        <div class="image-wrapper">
+                            <img src="placeholder.png" alt="Placeholder">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Placeholder 4</h5>
+                            <p class="card-text">Placeholder</p>
+                            <a href="#" class="btn btn-warning">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" id="cardlei">
+                        <div class="image-wrapper">
+                            <img src="placeholder.png" alt="Placeholder">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Placeholder 5</h5>
+                            <p class="card-text">Placeholder</p>
+                            <a href="#" class="btn btn-warning">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card" id="cardlei">
+                        <div class="image-wrapper">
+                            <img src="placeholder.png" alt="Placeholder">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Placeholder 6</h5>
+                            <p class="card-text">Placeholder</p>
+                            <a href="#" class="btn btn-warning">Visitar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <a class="carousel-control-prev" href="#carouselsmall" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselsmall" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
-      </div>
-      
+
+            <a class="carousel-control-prev" href="#carouselsmall" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselsmall" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
         <!-- <div class="card" id="cartão">
           <img class="card-img-top" src="dirtrabalhista.jpg" alt="Direito Trabalhista">
           <div class="card-body" id="fontcard">
@@ -360,25 +396,31 @@
             <a href="https://www.planalto.gov.br/ccivil_03/LEIS/2002/L10406compilada.htm" class="btn btn-primary btn-warning">Visitar</a>
           </div>
         </div> -->
-    
-  </div>
+
+    </div>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script> $(function () {
-        $('[data-toggle="popover"]').popover()
-        // Essa função de Javascript descrita na Wiki do Bootstrap permite o uso de popovers (caixas de texto que aparecem ao lado dos itens)
-      }) </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
-  
-  <div class="card">
+            $('[data-toggle="popover"]').popover()
+            // Essa função de Javascript descrita na Wiki do Bootstrap permite o uso de popovers (caixas de texto que aparecem ao lado dos itens)
+        }) </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+<div class="card">
     <div class="card-body">
-      <h5 class="card-title">Projeto Thêmis</h5>
-      <p class="card-text">Todos os direitos reservados</p>
-      <a href="suporte.html" class="btn btn-primary btn-outline-warning"> Suporte</a>
+        <h5 class="card-title">Projeto Thêmis</h5>
+        <p class="card-text">Todos os direitos reservados</p>
+        <a href="suporte.html" class="btn btn-primary btn-outline-warning"> Suporte</a>
     </div>
-  </div>
+</div>
 
 </html>
