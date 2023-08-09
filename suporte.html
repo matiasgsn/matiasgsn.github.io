@@ -45,7 +45,7 @@
     <div class="jumbotron jumbotron-fluid" style="background-color:#4169e1;">
         <div class="container">
             <h1 class="display-4" style="color:white;">Suporte - Projeto Thêmis</h1>
-            <p class="lead" style="color:white;">Denúncia de problemas na página</p>
+            <p class="lead" style="color:white;">Encontrou um problema? Descreva-o aqui.</p>
         </div>
     </div>
     
@@ -62,12 +62,11 @@
             <label for="exampleFormControlSelect2" class="form-label">Selecione o problema:</label>
             <select class="form-control" id="exampleFormControlSelect2" required>
                 <option value="" disabled selected>Selecione um</option>
-                <option>Vazamento de Dados Pessoais</option>
-                <option>Página sob ataque de DDoS</option>
-                <option>Latência</option>
-                <option>CSS do site não carrega</option>
-                <option>Erro de responsividade</option>
-                <option>Inputs não aceitam acento</option>
+                <option>Página lenta</option>
+                <option>Botões não funcionam</option>
+                <option>Informações incorretas</option>
+                <option>Erros de digitação</option>
+                <option>Página não funciona em determinado dispositivo</option>
             </select>
             <div class="valid-feedback">
                 Tudo certo!
@@ -75,6 +74,14 @@
             <div class="invalid-feedback">
                 Por favor, escolha uma opção.
               </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputProblema" class="form-label">Descreva a situação (não obrigatório):</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Situação encontrada" rows="3"></textarea>
+            <div class="valid-feedback">
+                Tudo certo!
+            </div>
         </div>
 
         <div class="form-group">
@@ -103,6 +110,10 @@
             <button type="submit" class="btn btn-warning mr-3" style="margin-top:-3rem;"> 
                 Enviar
             </button>
+
+            <a href="index.html" class="btn btn-warning" style="margin-top:-3rem;"> 
+                Página inicial
+            </a>
 
             <br> <br>
             <p id="texto">
