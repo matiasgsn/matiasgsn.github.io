@@ -15,50 +15,51 @@
 
 <body>
     <style>
+        /*Adição da família de fontes no projeto*/
         @font-face {
-          font-family:Now;
-          src: url(Fontes/Now-Light.otf);
-          font-weight: lighter;
-        }
-  
-        @font-face {
-          font-family:Now;
-          src: url(Fontes/Now-Regular.otf);
-          font-weight: normal;
-        }
-  
-        @font-face {
-          font-family:Now;
-          src: url(Fontes/NowAlt-Bold.otf);
-          font-weight: bold;
+            font-family: Now; /*Família da qual a fonte faz parte*/
+            src: url(Fontes/Now-Light.otf); /*Local do arquivo .otf*/
+            font-weight: lighter; /*Peso que essa fonte representa*/
         }
 
-        body{
-        font-family: Now;
-      }
+        @font-face {
+            font-family: Now; /*Família da qual a fonte faz parte*/
+            src: url(Fontes/Now-Regular.otf); /*Local do arquivo .otf*/
+            font-weight: normal; /*Peso que essa fonte representa*/
+        }
+
+        @font-face {
+            font-family: Now; /*Família da qual a fonte faz parte*/
+            src: url(Fontes/NowAlt-Bold.otf); /*Local do arquivo .otf*/
+            font-weight: bold; /*Peso que essa fonte representa*/
+        }
+
+        body { /*Aplicação da família de fonte em todo o corpo do código*/
+            font-family: Now;
+        }
 
         #texto{
             opacity: 75%;
         }
     </style>
 
-    <div class="jumbotron jumbotron-fluid" style="background-color:#4169e1;">
+    <div class="jumbotron jumbotron-fluid" style="background-color:#4169e1;"> <!-- Essa classe cria uma caixa grande na página pra chamar atenção-->
         <div class="container">
             <h1 class="display-4" style="color:white;">Suporte - Projeto Thêmis</h1>
             <p class="lead" style="color:white;">Encontrou um problema? Descreva-o aqui.</p>
         </div>
     </div>
     
-    <form class="w-75 mx-auto needs-validation" novalidate>
-        <div class="form-group">
+    <form class="w-75 mx-auto needs-validation" novalidate> <!--Criação de formulário cuja resposta requer validação-->
+        <div class="form-group"> <!--Caixa de texto pra nome do cliente-->
             <label for="exampleInputEmail1" class="form-label">Cliente:</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu nome" required>
-            <div class="valid-feedback">
+            <div class="valid-feedback"> <!--Caixa de feedback para resposta válida-->
                 Tudo certo!
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"> <!--Caixa de seleção de opção-->
             <label for="exampleFormControlSelect2" class="form-label">Selecione o problema:</label>
             <select class="form-control" id="exampleFormControlSelect2" required>
                 <option value="" disabled selected>Selecione um</option>
@@ -68,59 +69,60 @@
                 <option>Erros de digitação</option>
                 <option>Página não funciona em determinado dispositivo</option>
             </select>
-            <div class="valid-feedback">
+            <div class="valid-feedback"> <!--Caixa de feedback para resposta válida-->
                 Tudo certo!
             </div>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback"> <!--Caixa de feedback para resposta inválida-->
                 Por favor, escolha uma opção.
-              </div>
+            </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"> <!--Caixa de texto para descrição do problema-->
             <label for="exampleInputProblema" class="form-label">Descreva a situação (não obrigatório):</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Situação encontrada" rows="3"></textarea>
-            <div class="valid-feedback">
+            <div class="valid-feedback"> <!--Caixa de feedback para resposta válida-->
                 Tudo certo!
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"> <!--Caixa de texto para endereço de email do usuário-->
             <label for="exampleFormControlInput3">Endereço de email</label>
             <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="nome@exemplo.com" required>
-            <div class="valid-feedback">
+            <div class="valid-feedback"> <!--Caixa de feedback para resposta válida-->
                 Tudo certo!
             </div>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback"> <!--Caixa de feedback para resposta inválida-->
                 Por favor, insira um e-mail válido.
               </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"> <!--Caixa de texto para telefone do usuário-->
             <label for="exampleInputEmail4">Telefone:</label>
             <input type="number" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="(XX) XX XXXXX-XXXX" required>
-            <div class="valid-feedback">
+            <div class="valid-feedback"> <!--Caixa de feedback para resposta válida-->
                 Tudo certo!
             </div>
-            <div class="invalid-feedback">
+            <div class="invalid-feedback"> <!--Caixa de feedback para resposta inválida-->
                 Por favor, insira um número válido.
               </div>
             <br>
             <br>
             
-            <button type="submit" class="btn btn-warning mr-3" style="margin-top:-3rem;"> 
+            <button type="submit" class="btn btn-warning mr-3" style="margin-top:-3rem;">  <!--Botão de enviar formulário-->
                 Enviar
             </button>
 
-            <a href="index.html" class="btn btn-warning" style="margin-top:-3rem;"> 
+            <a href="index.html" class="btn btn-warning" style="margin-top:-3rem;"> <!--Botão de retornar à página inicial-->
                 Página inicial
             </a>
 
             <br> <br>
-            <p id="texto">
+            <p id="texto"> <!--Informativo-->
             O problema será solucionado dentre 3 a 48 horas. <br>
             Fique atento ao possível contato por e-mail ou telefone.
             </p>
-            <script>
+            
+            <script> // Código para validação dos dados inseridos
                 (function () {
                         'use strict'
                     
