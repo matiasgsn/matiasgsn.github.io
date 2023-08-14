@@ -65,7 +65,7 @@
             box-shadow: 2xp 6px 8px 0 rgba(22, 22, 26, 0.18);
         }
 
-        /*Estilização do Carrossel*/
+        /*Estilização dos controles do Carrossel*/
         .carousel-control-prev,
         .carousel-control-next {
             background-color: #1e1e1e;
@@ -84,7 +84,7 @@
 
 
 
-        @media screen and (min-width: 577px) { /*Estilização do carrossel para páginas grandes*/
+        @media screen and (min-width: 577px) { /*Estilização do carrossel para telas grandes*/
             .cards-wrapper {
                 display: flex;
             }
@@ -100,7 +100,7 @@
             }
         }
 
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) { /*Estilização do carrossel para telas pequenas*/
             .card:not(:first-child) {
                 display: none;
             }
@@ -111,6 +111,7 @@
             max-height: 100%;
         }
     </style>
+    
     <nav class="navbar navbar-light bg-light"> <!-- a Tag <nav> cria uma barra de navegação fixa no topo da tela-->
         <span class="navbar-brand mb-0 h1">Projeto Thêmis</span>
         <!-- O mx-auto centraliza o conteúdo na página automaticamente-->
@@ -190,176 +191,178 @@
     <div class="jumbotron"> <!-- Outra caixa especificamente para os cards-->
         <h2>Mais Relevantes:</h2>
 
-        <div id="carouselnormal" class="carousel slide d-none d-sm-block" data-ride="carousel">
+        <div id="carouselnormal" class="carousel slide d-none d-sm-block" data-ride="carousel"> <!--Carrossel (tela grande) para Cards de Artigos Relevantes-->
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active"> <!--Item ativo do carrossel, ou seja, o item que aparece primeiro ao abrir a página-->
+                    <!--Cada item desse carrossel contém 3 cards, ou seja, aparecem 3 cards por vez-->
                     <div class="cards-wrapper">
-                        <div class="card" id="cardlei">
+                        <div class="card" id="cardlei"> <!--Card 1-->
                             <div class="image-wrapper">
-                                <img src="placeholder.png" alt="Placeholder">
+                                <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Direitos Trabalhistas</h5>
-                                <p class="card-text">Consolidação das Leis Trabalhistas (CLT).</p>
+                                <h5 class="card-title">Direitos Trabalhistas</h5> <!--Título do card--> 
+                                <p class="card-text">Consolidação das Leis Trabalhistas (CLT).</p> <!--Texto do card-->
+                                <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
+                            </div>
+                        </div>
+
+                        <div class="card" id="cardlei"> <!--Card 2-->
+                            <div class="image-wrapper">
+                                <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Direitos Fundamentais (art. 5°)</h5> <!--Título do card--> 
+                                <p class="card-text">Direitos Fundamentais de todos as pessoas no território brasileiro. <!--Texto do card-->
+                                </p> <!--Botão de visitar página no card-->
                                 <a href="#" class="btn btn-warning">Visitar</a>
                             </div>
                         </div>
 
-                        <div class="card" id="cardlei">
+                        <div class="card" id="cardlei"> <!--Card 3-->
                             <div class="image-wrapper">
-                                <img src="placeholder.png" alt="Placeholder">
+                                <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Direitos Fundamentais (art. 5°)</h5>
-                                <p class="card-text">Direitos Fundamentais de todos as pessoas no território brasileiro.
-                                </p>
-                                <a href="#" class="btn btn-warning">Visitar</a>
-                            </div>
-                        </div>
-
-                        <div class="card" id="cardlei">
-                            <div class="image-wrapper">
-                                <img src="placeholder.png" alt="Placeholder">
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Código Penal</h5>
-                                <p class="card-text">As medidas de socioeducação aplicadas aos infratores.</p>
-                                <a href="#" class="btn btn-warning">Visitar</a>
+                                <h5 class="card-title">Código Penal</h5> <!--Título do card--> 
+                                <p class="card-text">As medidas de socioeducação aplicadas aos infratores.</p> <!--Texto do card-->
+                                <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="carousel-item">
+                <div class="carousel-item"> <!--Item do carrossel-->
                     <div class="cards-wrapper">
-                        <div class="card" id="cardlei">
+                        <div class="card" id="cardlei"> <!--Card 4-->
                             <div class="image-wrapper">
-                                <img src="placeholder.png" alt="Placeholder">
+                                <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Maria da Penha</h5>
-                                <p class="card-text">A lei que visa proteger as mulheres contra agressões de quaisquer
-                                    tipos.</p>
+                                <h5 class="card-title">Maria da Penha</h5> <!--Título do card--> 
+                                <p class="card-text">A lei que visa proteger as mulheres contra agressões de quaisquer <!--Texto do card-->
+                                    tipos.</p> <!--Botão de visitar página no card-->
                                 <a href="#" class="btn btn-warning">Visitar</a>
                             </div>
                         </div>
 
-                        <div class="card" id="cardlei">
+                        <div class="card" id="cardlei"> <!--Card 5-->
                             <div class="image-wrapper">
-                                <img src="placeholder.png" alt="Placeholder">
+                                <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Código de Defesa do Consumidor</h5>
-                                <p class="card-text">Os direitos de quem compra e os deveres de quem vende.</p>
-                                <a href="#" class="btn btn-warning">Visitar</a>
+                                <h5 class="card-title">Código de Defesa do Consumidor</h5> <!--Título do card--> 
+                                <p class="card-text">Os direitos de quem compra e os deveres de quem vende.</p> <!--Texto do card-->
+                                <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                             </div>
                         </div>
 
-                        <div class="card" id="cardlei">
+                        <div class="card" id="cardlei"> <!--Card 6-->
                             <div class="image-wrapper">
-                                <img src="placeholder.png" alt="Placeholder">
+                                <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Seguridade Social</h5>
-                                <p class="card-text">Os direitos de seguridade social.</p>
-                                <a href="#" class="btn btn-warning">Visitar</a>
+                                <h5 class="card-title">Seguridade Social</h5> <!--Título do card--> 
+                                <p class="card-text">Os direitos de seguridade social.</p> <!--Texto do card-->
+                                <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselnormal" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselnormal" role="button" data-slide="prev"> <!--Botão de "página anterior" do carrossel-->
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Anterior</span>
             </a>
-            <a class="carousel-control-next" href="#carouselnormal" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselnormal" role="button" data-slide="next"> <!--Botão de "página seguinte" do carrossel-->
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Próximo</span>
             </a>
         </div>
 
-        <div id="carouselsmall" class="carousel slide d-sm-none" data-ride="carousel">
+        <div id="carouselsmall" class="carousel slide d-sm-none" data-ride="carousel"> <!--Carrossel (tela pequena) para Cards de Artigos Relevantes-->
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="card" id="cardlei">
+                <div class="carousel-item active"> <!--Item ativo do carrossel, ou seja, o item que aparece primeiro ao abrir a página-->
+                    <!--Cada item desse carrossel contém 1 card, ou seja, aparece 1 card por vez-->
+                    <div class="card" id="cardlei"> <!--Card 1-->
                         <div class="image-wrapper">
-                            <img src="placeholder.png" alt="Placeholder">
+                            <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Placeholder 1</h5>
-                            <p class="card-text">Placeholder</p>
-                            <a href="#" class="btn btn-warning">Visitar</a>
+                            <h5 class="card-title">Placeholder 1</h5> <!--Título do card--> 
+                            <p class="card-text">Placeholder</p> <!--Texto do card-->
+                            <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card" id="cardlei">
+                <div class="carousel-item"> <!--Item do carrossel-->
+                    <div class="card" id="cardlei"> <!--Card 2-->
                         <div class="image-wrapper">
-                            <img src="placeholder.png" alt="Placeholder">
+                            <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Placeholder 2</h5>
-                            <p class="card-text">Placeholder</p>
-                            <a href="#" class="btn btn-warning">Visitar</a>
+                            <h5 class="card-title">Placeholder 2</h5> <!--Título do card--> 
+                            <p class="card-text">Placeholder</p> <!--Texto do card-->
+                            <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card" id="cardlei">
+                <div class="carousel-item"> <!--Item do carrossel-->
+                    <div class="card" id="cardlei"> <!--Card 3-->
                         <div class="image-wrapper">
-                            <img src="placeholder.png" alt="Placeholder">
+                            <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Placeholder 3</h5>
-                            <p class="card-text">Placeholder</p>
-                            <a href="#" class="btn btn-warning">Visitar</a>
+                            <h5 class="card-title">Placeholder 3</h5> <!--Título do card--> 
+                            <p class="card-text">Placeholder</p> <!--Texto do card-->
+                            <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card" id="cardlei">
+                <div class="carousel-item"> <!--Item do carrossel-->
+                    <div class="card" id="cardlei"> <!--Card 4-->
                         <div class="image-wrapper">
-                            <img src="placeholder.png" alt="Placeholder">
+                            <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Placeholder 4</h5>
-                            <p class="card-text">Placeholder</p>
-                            <a href="#" class="btn btn-warning">Visitar</a>
+                            <h5 class="card-title">Placeholder 4</h5> <!--Título do card--> 
+                            <p class="card-text">Placeholder</p> <!--Texto do card-->
+                            <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card" id="cardlei">
+                <div class="carousel-item"> <!--Item do carrossel-->
+                    <div class="card" id="cardlei"> <!--Card 5-->
                         <div class="image-wrapper">
-                            <img src="placeholder.png" alt="Placeholder">
+                            <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Placeholder 5</h5>
-                            <p class="card-text">Placeholder</p>
-                            <a href="#" class="btn btn-warning">Visitar</a>
+                            <h5 class="card-title">Placeholder 5</h5> <!--Título do card--> 
+                            <p class="card-text">Placeholder</p> <!--Texto do card-->
+                            <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="card" id="cardlei">
+                <div class="carousel-item"> <!--Item do carrossel-->
+                    <div class="card" id="cardlei"> <!--Card 6-->
                         <div class="image-wrapper">
-                            <img src="placeholder.png" alt="Placeholder">
+                            <img src="placeholder.png" alt="Placeholder"> <!--Imagem do card-->
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Placeholder 6</h5>
-                            <p class="card-text">Placeholder</p>
-                            <a href="#" class="btn btn-warning">Visitar</a>
+                            <h5 class="card-title">Placeholder 6</h5> <!--Título do card--> 
+                            <p class="card-text">Placeholder</p> <!--Texto do card-->
+                            <a href="#" class="btn btn-warning">Visitar</a> <!--Botão de visitar página no card-->
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <a class="carousel-control-prev" href="#carouselsmall" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselsmall" role="button" data-slide="prev"> <!--Botão de "página anterior" do carrossel-->
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Anterior</span>
             </a>
-            <a class="carousel-control-next" href="#carouselsmall" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselsmall" role="button" data-slide="next"> <!--Botão de "página seguinte" do carrossel-->
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Próximo</span>
             </a>
