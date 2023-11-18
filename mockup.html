@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+    <style> 
+        /*Adição da família de fontes no projeto*/
+        @font-face {
+            font-family: Now; /*Família da qual a fonte faz parte*/
+            src: url(Fontes/Now-Light.otf); /*Local do arquivo .otf*/
+            font-weight: lighter; /*Peso que essa fonte representa*/
+        }
+
+        @font-face {
+            font-family: Now; /*Família da qual a fonte faz parte*/
+            src: url(Fontes/Now-Regular.otf); /*Local do arquivo .otf*/
+            font-weight: normal; /*Peso que essa fonte representa*/
+        }
+
+        @font-face {
+            font-family: Now; /*Família da qual a fonte faz parte*/
+            src: url(Fontes/NowAlt-Bold.otf); /*Local do arquivo .otf*/
+            font-weight: bold; /*Peso que essa fonte representa*/
+        }
+
+        body { /*Aplicação da família de fonte em todo o corpo do código*/
+            font-family: Now;
+        }
+
+        #artigo p {
+            font-size: 20px;
+            margin-bottom: 2vh;
+        }
+
+        #artigo h3, h2 {
+            font-weight: bold;
+        }
+
+        #herotab {
+            background-image: url(direitos\ fundamentais.jpg);
+            background-position: center; /* Posiciona a imagem no centro da div */
+        }
+    </style>
+
+<nav class="navbar navbar-light bg-primary"> <!-- a Tag <nav> cria uma barra de navegação fixa no topo da tela-->
+    <!-- O mx-auto centraliza o conteúdo na página automaticamente-->
+    <!-- Botão para acionar modal -->
+    <a href="index.html"> <!--Botão de retornar à página inicial-->
+        <span class="navbar-brand mb-0 h1">Projeto Thêmis</span>
+    </a>
+    <form class="form-inline my-2 my-md-0">
+        <input class="form-control" type="text" placeholder="Pesquisa" style="width: 75vh;">
+      </form>
+    
+    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ModalLongoExemplo"> <!-- Botão para acessar o modal "sobre nós" do site -->
+        Sobre Nós
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog"
+        aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"
+                style="background-image:url(placeholder2.jpg);background-repeat: no-repeat;background-size: cover; color: black;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalLongoExemplo">Sobre nós</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: justify;"> <!-- Informações presentes no modal -->
+                    Tendo uma visão ampla do déficit relativo ao conhecimento da Constituição, que afeta a
+                    democracia brasileira, o Projeto Thêmis, site que traz com clareza, acessibilidade e humanidade
+                    a Constituição Federal, foi criado, com a intenção de atender à necessidade cotidiana das
+                    pessoas de exercerem sua cidadania, defendendo seus direitos e compreendendo os seus deveres.
+                    <br>
+                    <br>
+                    Esse site tem o objetivo de facilitar o acesso a constituição a fim de que a população que não
+                    tem ciência sobre seus direitos assegurados pela Carta Magna possa tê-la, suprindo assim a falta
+                    desses aprendizados no ensino educacional brasileiro.
+                    <br>
+                    <br>
+                    Projeto realizado pelos alunos do 3° ano do SESI/SENAI Feira de Santana:
+                    <br>
+                    <ul>
+                    <li> Luana Keren Almeida Lobo </li>
+                    <li> Marcos Vinícius Souza Santana </li>
+                    <li> Matias Gonçalves dos Santos Neto </li>
+                    <li> Rafael Lima dos Santos </li>
+                    <li> Railan Patrick Teles de Oliveira </li>
+                    <li> Tainá Vieira de Jesus </li>
+                    <li> Tauana Santos Nunes da Cruz </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</nav>
+
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" id="herotab">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Artigo 5º</h1>
+      <p class="lead my-3">Todos são iguais perante a lei, sem distinção
+        de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade,
+        à segurança e à propriedade...</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue lendo...</a></p>
+    </div>
+  </div>
+
+<div class="justify-content-center blog-main" id="artigo" style="margin-inline: 10%;">
+    <div class="blog-post">
+      <h2 class="blog-post-title">Os Princípios Fundamentais do Quinto Artigo da Constituição Brasileira</h2>
+      <p>Descubra o Coração da Constituição do Brasil</p>
+      <hr>
+      <p class="border rounded p-3">O quinto artigo da Constituição Federal é como um guia que nos mostra o que é realmente importante para o nosso país. Ele fala de coisas fundamentais, como o Brasil tomando suas próprias decisões, todos nós tendo os mesmos direitos e deveres, e a certeza de que cada pessoa merece respeito e oportunidades. Esse artigo é como um alicerce que nos ajuda a entender o que faz a nossa sociedade ser justa, unida e livre.</p>
+    
+      <h3>Soberania: Autonomia e Escolhas Nacionais</h3>
+      <p>No artigo 5º, encontramos a ideia de soberania. Isso não significa apenas que o governo brasileiro toma decisões por si só, mas também destaca a importância de tomar decisões que beneficiem a nação como um todo. É como a capacidade do Brasil de escolher seu próprio caminho, considerando os interesses do povo brasileiro.</p>
+
+      <h3>Cidadania: Direitos Iguais e Responsabilidades Coletivas</h3>
+      <p>Um ponto vital abordado é o conceito de cidadania. Esse princípio ressalta que todos os brasileiros têm os mesmos direitos, independentemente de quem são. Além disso, destaca a necessidade de cada pessoa contribuir para a preservação do bem comum. Ou seja, é como todos jogando juntos para construir uma sociedade justa e inclusiva.</p>
+
+      <h3>Dignidade da Pessoa Humana: Respeito à Vida e à Liberdade</h3>
+      <p>A dignidade da pessoa humana é reconhecida como um valor supremo. Isso significa que o Estado brasileiro se compromete a garantir condições que permitam a todos viver com dignidade, respeitando a vida, a liberdade, o desenvolvimento e a igualdade. Esse princípio é como um fio condutor que permeia as relações sociais e a atuação do governo, assegurando um tratamento respeitoso e oportunidades justas para todos os cidadãos.</p>
+      <p>Dessa forma, o quinto artigo da Constituição Brasileira emerge como uma peça essencial na construção da identidade nacional, estabelecendo os fundamentos para uma sociedade justa, solidária e livre.</p>
+
+      <main role="main" class="container">
+        <div class="my-3 p-3 bg-white rounded shadow-sm">
+          <h6 class="border-bottom border-gray pb-2 mb-0">Redigido por:</h6>
+          <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&amp;bg=007bff&amp;fg=007bff&amp;size=1" alt="32x32" class="mr-2 rounded" style="width: 32px; height: 32px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18be3c3d4dc%20text%20%7B%20fill%3A%23007bff%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18be3c3d4dc%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23007bff%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.541290283203125%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">Maria Gomes de Andrade</strong>
+              Direito Civil e Familiar
+            </p>
+          </div>
+          <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&amp;bg=e83e8c&amp;fg=e83e8c&amp;size=1" alt="32x32" class="mr-2 rounded" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18be3c3d4e3%20text%20%7B%20fill%3A%23e83e8c%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18be3c3d4e3%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23e83e8c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.541290283203125%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 32px; height: 32px;">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">Carlos Costa de Jesus</strong>
+              Direito do Trabalho
+            </p>
+          </div>
+          <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&amp;bg=6f42c1&amp;fg=6f42c1&amp;size=1" alt="32x32" class="mr-2 rounded" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2232%22%20height%3D%2232%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18be3c3d4e5%20text%20%7B%20fill%3A%236f42c1%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A2pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18be3c3d4e5%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%236f42c1%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2211.541290283203125%22%20y%3D%2216.9%22%3E32x32%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 32px; height: 32px;">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+              <strong class="d-block text-gray-dark">Marcos Cerqueira Rodrigues</strong>
+              Direito Penal e Empresarial
+            </p>
+          </div>
+        </div>
+      </main>
+
+    </div><!-- /.blog-post -->
+  </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script> $(function () {
+            $('[data-toggle="popover"]').popover()
+            // Essa função de Javascript descrita na Wiki do Bootstrap permite o uso de popovers (caixas de texto que aparecem ao lado dos itens)
+        }) </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+</html>

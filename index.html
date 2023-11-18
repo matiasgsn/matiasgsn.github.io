@@ -84,7 +84,7 @@
 
 
 
-        @media screen and (min-width: 577px) { /*Estilização do carrossel para telas grandes*/
+        @media screen and (min-width: 769px) { /*Estilização do carrossel para telas grandes*/
             .cards-wrapper {
                 display: flex;
             }
@@ -92,15 +92,20 @@
             #cardlei {
                 margin: 0 .5em;
                 width: calc(100% / 3);
+                height: 100%
             }
 
             .image-wrapper {
                 height: 22vw;
                 margin: 0 auto;
             }
+
+            .card-body{
+                height: 20vh;
+            }
         }
 
-        @media screen and (max-width: 576px) { /*Estilização do carrossel para telas pequenas*/
+        @media screen and (max-width: 768px) { /*Estilização do carrossel para telas pequenas*/
             .card:not(:first-child) {
                 display: none;
             }
@@ -169,7 +174,7 @@
             <!-- Display altera o tamanho da fonte-->
         </center>
 
-        <form class="form-inline pt-4 my-2 justify-content-center">
+        <form class="form-inline pt-4 my-2 justify-content-center" action="mockup.html">
             <!-- O Bootstrap é um método de programação baseado em HTML que usa a CLASSE como método de customização. Neste formulário, pt-4 adiciona um Padding-top de tamanho 4, my-2 adiciona uma Margem no eixo Y de tamanho 2 e justify-content-center justifica o conteúdo ao centro-->
             <input class="form-control mr-sm-1 w-50 p-3 rounded" type="search" placeholder="Digite a lei"
                 aria-label="Pesquisar">
@@ -394,7 +399,4 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
-
-
-
-</html>00
+</html>
